@@ -30,7 +30,7 @@ and with [`vl-source-sputnik`](component/sputnik-source.md).
     </vl-layer-tile>
     
     <vl-layer-tile id="wmts">
-      <vl-source-wmts :attributions="attribution" :url="url" :layer-name="layerName" :matrix-set="matrixSet" :format="format" 
+      <vl-source-xyz :attributions="attribution" :url="url" :layer-name="layerName" :matrix-set="matrixSet" :format="format" 
                       :style-name="styleName"></vl-source-image-static>
     </vl-layer-tile>
   </vl-map>
@@ -43,7 +43,7 @@ and with [`vl-source-sputnik`](component/sputnik-source.md).
         zoom: 2,
         center: [-90, 50],
         rotation: 0,
-        url: 'https://services.arcgisonline.com/arcgis/rest/services/Demographics/USA_Population_Density/MapServer/WMTS/',
+        url: 'http://202.121.180.22:6080/arcgis/rest/services/hangzhou_7/MapServer/tile/{z}/{x}/{y}',
         layerName: '0',
         matrixSet: 'EPSG:3857',
         format: 'image/png',
